@@ -18,12 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download code
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: install nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: install dependencies
         run: npm ci
-      - name: run server
-        run: npm run dev
+      - name: build project
+        run: npm run build
+      - name: deploy
+        run: echo "deploying..."
