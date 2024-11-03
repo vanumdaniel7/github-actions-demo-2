@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download code
-      - uses: actions/checkout@
+        uses: actions/checkout@
       - name: install nodejs
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: install dependencies
-      - run: npm ci
+        run: npm ci
       - name: run tests
-      - run: npm run test
+        run: npm run test
