@@ -8,7 +8,9 @@ jobs:
       - uses: actions/checkout@
       - name: install nodejs
       - uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: install dependencies
-      - run: npm install
+      - run: npm ci
       - name: run tests
       - run: npm run test
